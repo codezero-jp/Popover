@@ -52,7 +52,7 @@ open class PopoverView: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.layer.cornerRadius = CornerRadius
         tableView.layer.masksToBounds = true
-        
+        tableView.scrollsToTop = false
         return tableView
     }()
     
