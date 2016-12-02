@@ -32,6 +32,7 @@ open class PopoverView: UIView {
     fileprivate let direction: Direction
     fileprivate let reverseHorizontalCoordinates: Bool
     fileprivate let style: PopoverStyle
+    fileprivate let showArraw: Bool
     
     fileprivate weak var commonSuperView: UIView!
     
@@ -95,6 +96,7 @@ open class PopoverView: UIView {
         self.direction = host.direction
         self.reverseHorizontalCoordinates = host.reverseHorizontalCoordinates
         self.style = host.style
+        self.showArraw = host.showArraw
         
         self.commonSuperView = commonSuperView
         
@@ -105,6 +107,8 @@ open class PopoverView: UIView {
     
     open override func layoutSubviews() {
         super.layoutSubviews()
+        
+        if !self.showArraw { return }
         
         if nil != arrawView.layer.contents {
             return

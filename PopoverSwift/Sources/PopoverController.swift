@@ -32,6 +32,7 @@ public final class PopoverController {
     internal let direction: Direction
     internal let reverseHorizontalCoordinates: Bool
     internal let style: PopoverStyle
+    internal let showArraw: Bool
     
     public var coverColor: UIColor? {
         didSet {
@@ -53,13 +54,15 @@ public final class PopoverController {
         fromView: UIView,
         direction: Direction = .down,
         reverseHorizontalCoordinates: Bool = false,
-        style: PopoverStyle = .normal)
+        style: PopoverStyle = .normal,
+        showArraw: Bool = true)
     {
         self.items = items
         self.fromView = fromView
         self.direction = direction
         self.reverseHorizontalCoordinates = reverseHorizontalCoordinates
         self.style = style
+        self.showArraw = showArraw
     }
     
 #if DEBUG
